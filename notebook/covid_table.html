@@ -1,0 +1,1586 @@
+
+<style>
+table.dataframe {
+    width: 100%;
+}
+
+table.dataframe tr {
+    border-left: 1px solid rgba(255,255,255,.75);
+}
+
+table.dataframe th {
+    color: white;
+    background-color: #6e6e6e;
+    border-left: 1px solid rgba(255,255,255,.75);
+}
+
+table.dataframe td {
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 8px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+
+table.dataframe td[data-score] {
+    display: none;
+}
+
+table.dataframe td[data-score="0"],
+table.dataframe td[data-score="0"]~ * {
+    background-color: rgb(227,6,19);
+    color: #e6e6e6;
+}
+
+table.dataframe td[data-score="1"],
+table.dataframe td[data-score="1"]~ * {
+    background-color: rgb(227, 126, 2);
+    color: #e6e6e6;
+}
+
+table.dataframe td[data-score="2"],
+table.dataframe td[data-score="2"]~ * {
+    background-color: rgb(58, 207, 107);
+}
+
+table.dataframe td[data-score="3"],
+table.dataframe td[data-score="3"]~ * {
+    background-color: rgb(39, 141, 204);
+}
+
+table.dataframe td[data-score="3"],
+table.dataframe td[data-score="3"]~ * {
+    background-color: rgb(39, 141, 204);
+}
+
+table.dataframe tr > *:nth-child(1),
+table.dataframe tr > *:nth-child(2) {
+    display: none;
+}
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>score</th>
+      <th>Country</th>
+      <th>Continent</th>
+      <th>Total deaths</th>
+      <th>Total cases</th>
+      <th>Regimes</th>
+      <th>Flags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td><td data-score="1">1</td></td>
+      <td>Afghanistan</td>
+      <td>Asia</td>
+      <td>1370.0</td>
+      <td>37551.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td><td data-score="3">3</td></td>
+      <td>Albania</td>
+      <td>Europe</td>
+      <td>225.0</td>
+      <td>7260.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td><td data-score="2">2</td></td>
+      <td>Algeria</td>
+      <td>Africa</td>
+      <td>1360.0</td>
+      <td>38133.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td><td data-score="1">1</td></td>
+      <td>Angola</td>
+      <td>Africa</td>
+      <td>86.0</td>
+      <td>1852.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td><td data-score="3">3</td></td>
+      <td>Argentina</td>
+      <td>South America</td>
+      <td>5565.0</td>
+      <td>282424.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td><td data-score="2">2</td></td>
+      <td>Armenia</td>
+      <td>Asia</td>
+      <td>817.0</td>
+      <td>41495.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td><td data-score="3">3</td></td>
+      <td>Australia</td>
+      <td>Oceania</td>
+      <td>379.0</td>
+      <td>23035.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td><td data-score="3">3</td></td>
+      <td>Austria</td>
+      <td>Europe</td>
+      <td>728.0</td>
+      <td>23211.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td><td data-score="0">0</td></td>
+      <td>Azerbaijan</td>
+      <td>Asia</td>
+      <td>506.0</td>
+      <td>34107.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td><td data-score="0">0</td></td>
+      <td>Bahrain</td>
+      <td>Asia</td>
+      <td>170.0</td>
+      <td>46430.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td><td data-score="2">2</td></td>
+      <td>Bangladesh</td>
+      <td>Asia</td>
+      <td>3625.0</td>
+      <td>274525.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td><td data-score="0">0</td></td>
+      <td>Belarus</td>
+      <td>Europe</td>
+      <td>607.0</td>
+      <td>69424.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td><td data-score="3">3</td></td>
+      <td>Belgium</td>
+      <td>Europe</td>
+      <td>9939.0</td>
+      <td>78409.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Belgium_%28civil%29.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td><td data-score="3">3</td></td>
+      <td>Benin</td>
+      <td>Africa</td>
+      <td>39.0</td>
+      <td>2063.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td><td data-score="2">2</td></td>
+      <td>Bhutan</td>
+      <td>Asia</td>
+      <td>0.0</td>
+      <td>133.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td><td data-score="3">3</td></td>
+      <td>Bolivia</td>
+      <td>South America</td>
+      <td>4003.0</td>
+      <td>99146.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td><td data-score="3">3</td></td>
+      <td>Botswana</td>
+      <td>Africa</td>
+      <td>3.0</td>
+      <td>1214.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td><td data-score="3">3</td></td>
+      <td>Brazil</td>
+      <td>South America</td>
+      <td>107232.0</td>
+      <td>3317096.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td><td data-score="3">3</td></td>
+      <td>Bulgaria</td>
+      <td>Europe</td>
+      <td>495.0</td>
+      <td>14333.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td><td data-score="3">3</td></td>
+      <td>Burkina Faso</td>
+      <td>Africa</td>
+      <td>54.0</td>
+      <td>1249.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td><td data-score="1">1</td></td>
+      <td>Burundi</td>
+      <td>Africa</td>
+      <td>1.0</td>
+      <td>412.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td><td data-score="2">2</td></td>
+      <td>Cambodia</td>
+      <td>Asia</td>
+      <td>0.0</td>
+      <td>273.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td><td data-score="1">1</td></td>
+      <td>Cameroon</td>
+      <td>Africa</td>
+      <td>401.0</td>
+      <td>18469.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td><td data-score="3">3</td></td>
+      <td>Canada</td>
+      <td>North America</td>
+      <td>9024.0</td>
+      <td>121889.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td><td data-score="3">3</td></td>
+      <td>Cape Verde</td>
+      <td>Africa</td>
+      <td>34.0</td>
+      <td>3163.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td><td data-score="2">2</td></td>
+      <td>Central African Republic</td>
+      <td>Africa</td>
+      <td>61.0</td>
+      <td>4652.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Central_African_Republic.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td><td data-score="1">1</td></td>
+      <td>Chad</td>
+      <td>Africa</td>
+      <td>76.0</td>
+      <td>952.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Chad.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td><td data-score="3">3</td></td>
+      <td>Chile</td>
+      <td>South America</td>
+      <td>10395.0</td>
+      <td>383902.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td><td data-score="0">0</td></td>
+      <td>China</td>
+      <td>Asia</td>
+      <td>4703.0</td>
+      <td>89279.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td><td data-score="3">3</td></td>
+      <td>Colombia</td>
+      <td>South America</td>
+      <td>14810.0</td>
+      <td>456689.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td><td data-score="3">3</td></td>
+      <td>Comoros</td>
+      <td>Africa</td>
+      <td>7.0</td>
+      <td>403.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td><td data-score="3">3</td></td>
+      <td>Costa Rica</td>
+      <td>North America</td>
+      <td>291.0</td>
+      <td>27737.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td><td data-score="3">3</td></td>
+      <td>Croatia</td>
+      <td>Europe</td>
+      <td>165.0</td>
+      <td>6420.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td><td data-score="0">0</td></td>
+      <td>Cuba</td>
+      <td>North America</td>
+      <td>88.0</td>
+      <td>3292.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td><td data-score="3">3</td></td>
+      <td>Cyprus</td>
+      <td>Europe</td>
+      <td>20.0</td>
+      <td>1332.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td><td data-score="3">3</td></td>
+      <td>Czech Republic</td>
+      <td>Europe</td>
+      <td>395.0</td>
+      <td>19891.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td><td data-score="3">3</td></td>
+      <td>Denmark</td>
+      <td>Europe</td>
+      <td>621.0</td>
+      <td>15483.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td><td data-score="2">2</td></td>
+      <td>Djibouti</td>
+      <td>Africa</td>
+      <td>59.0</td>
+      <td>5367.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Djibouti.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td><td data-score="3">3</td></td>
+      <td>Dominican Republic</td>
+      <td>North America</td>
+      <td>1438.0</td>
+      <td>85545.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td><td data-score="2">2</td></td>
+      <td>Ecuador</td>
+      <td>South America</td>
+      <td>6065.0</td>
+      <td>100688.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td><td data-score="1">1</td></td>
+      <td>Egypt</td>
+      <td>Africa</td>
+      <td>5141.0</td>
+      <td>96336.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td><td data-score="3">3</td></td>
+      <td>El Salvador</td>
+      <td>North America</td>
+      <td>612.0</td>
+      <td>22619.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td><td data-score="0">0</td></td>
+      <td>Equatorial Guinea</td>
+      <td>Africa</td>
+      <td>83.0</td>
+      <td>4821.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Equatorial_Guinea.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td><td data-score="0">0</td></td>
+      <td>Eritrea</td>
+      <td>Africa</td>
+      <td>0.0</td>
+      <td>285.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Eritrea.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td><td data-score="3">3</td></td>
+      <td>Estonia</td>
+      <td>Europe</td>
+      <td>63.0</td>
+      <td>2184.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td><td data-score="2">2</td></td>
+      <td>Fiji</td>
+      <td>Oceania</td>
+      <td>1.0</td>
+      <td>27.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Fiji.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td><td data-score="3">3</td></td>
+      <td>Finland</td>
+      <td>Europe</td>
+      <td>333.0</td>
+      <td>7720.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td><td data-score="3">3</td></td>
+      <td>France</td>
+      <td>Europe</td>
+      <td>30409.0</td>
+      <td>215521.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td><td data-score="2">2</td></td>
+      <td>Gabon</td>
+      <td>Africa</td>
+      <td>51.0</td>
+      <td>8225.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Gabon.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td><td data-score="3">3</td></td>
+      <td>Georgia</td>
+      <td>Asia</td>
+      <td>17.0</td>
+      <td>1321.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td><td data-score="3">3</td></td>
+      <td>Germany</td>
+      <td>Europe</td>
+      <td>9231.0</td>
+      <td>223453.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td><td data-score="3">3</td></td>
+      <td>Ghana</td>
+      <td>Africa</td>
+      <td>231.0</td>
+      <td>42210.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td><td data-score="3">3</td></td>
+      <td>Greece</td>
+      <td>Europe</td>
+      <td>226.0</td>
+      <td>6858.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td><td data-score="3">3</td></td>
+      <td>Guatemala</td>
+      <td>North America</td>
+      <td>2355.0</td>
+      <td>62313.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td><td data-score="2">2</td></td>
+      <td>Guinea</td>
+      <td>Africa</td>
+      <td>50.0</td>
+      <td>8343.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Guinea.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td><td data-score="3">3</td></td>
+      <td>Guinea-Bissau</td>
+      <td>Africa</td>
+      <td>33.0</td>
+      <td>2117.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Guinea-Bissau.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td><td data-score="3">3</td></td>
+      <td>Guyana</td>
+      <td>South America</td>
+      <td>22.0</td>
+      <td>674.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Guyana.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td><td data-score="2">2</td></td>
+      <td>Haiti</td>
+      <td>North America</td>
+      <td>196.0</td>
+      <td>7831.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td><td data-score="3">3</td></td>
+      <td>Honduras</td>
+      <td>North America</td>
+      <td>1567.0</td>
+      <td>49979.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Honduras.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td><td data-score="3">3</td></td>
+      <td>Hungary</td>
+      <td>Europe</td>
+      <td>607.0</td>
+      <td>4877.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td><td data-score="3">3</td></td>
+      <td>India</td>
+      <td>Asia</td>
+      <td>49980.0</td>
+      <td>2589682.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td><td data-score="3">3</td></td>
+      <td>Indonesia</td>
+      <td>Asia</td>
+      <td>6071.0</td>
+      <td>137468.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td><td data-score="0">0</td></td>
+      <td>Iran</td>
+      <td>Asia</td>
+      <td>19492.0</td>
+      <td>341070.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td><td data-score="3">3</td></td>
+      <td>Iraq</td>
+      <td>Asia</td>
+      <td>5785.0</td>
+      <td>172583.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td><td data-score="3">3</td></td>
+      <td>Ireland</td>
+      <td>Europe</td>
+      <td>1774.0</td>
+      <td>27191.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td><td data-score="3">3</td></td>
+      <td>Israel</td>
+      <td>Asia</td>
+      <td>674.0</td>
+      <td>92343.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td><td data-score="3">3</td></td>
+      <td>Italy</td>
+      <td>Europe</td>
+      <td>35392.0</td>
+      <td>253438.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td><td data-score="3">3</td></td>
+      <td>Jamaica</td>
+      <td>North America</td>
+      <td>14.0</td>
+      <td>1082.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td><td data-score="3">3</td></td>
+      <td>Japan</td>
+      <td>Asia</td>
+      <td>1088.0</td>
+      <td>54714.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td><td data-score="1">1</td></td>
+      <td>Jordan</td>
+      <td>Asia</td>
+      <td>11.0</td>
+      <td>1339.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td><td data-score="0">0</td></td>
+      <td>Kazakhstan</td>
+      <td>Asia</td>
+      <td>1485.0</td>
+      <td>121161.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td><td data-score="3">3</td></td>
+      <td>Kenya</td>
+      <td>Africa</td>
+      <td>472.0</td>
+      <td>29849.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td><td data-score="0">0</td></td>
+      <td>Kuwait</td>
+      <td>Asia</td>
+      <td>498.0</td>
+      <td>75697.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td><td data-score="3">3</td></td>
+      <td>Kyrgyzstan</td>
+      <td>Asia</td>
+      <td>1495.0</td>
+      <td>41856.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td><td data-score="0">0</td></td>
+      <td>Laos</td>
+      <td>Asia</td>
+      <td>0.0</td>
+      <td>20.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td><td data-score="3">3</td></td>
+      <td>Latvia</td>
+      <td>Europe</td>
+      <td>32.0</td>
+      <td>1315.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td><td data-score="3">3</td></td>
+      <td>Lebanon</td>
+      <td>Asia</td>
+      <td>97.0</td>
+      <td>8442.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td><td data-score="3">3</td></td>
+      <td>Lesotho</td>
+      <td>Africa</td>
+      <td>25.0</td>
+      <td>903.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Flag_of_Lesotho.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td><td data-score="3">3</td></td>
+      <td>Liberia</td>
+      <td>Africa</td>
+      <td>82.0</td>
+      <td>1257.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Liberia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td><td data-score="2">2</td></td>
+      <td>Libya</td>
+      <td>Africa</td>
+      <td>145.0</td>
+      <td>7738.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Libya.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td><td data-score="3">3</td></td>
+      <td>Lithuania</td>
+      <td>Europe</td>
+      <td>81.0</td>
+      <td>2386.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td><td data-score="3">3</td></td>
+      <td>Luxembourg</td>
+      <td>Europe</td>
+      <td>123.0</td>
+      <td>7439.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td><td data-score="3">3</td></td>
+      <td>Madagascar</td>
+      <td>Africa</td>
+      <td>166.0</td>
+      <td>13724.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Madagascar.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td><td data-score="3">3</td></td>
+      <td>Malawi</td>
+      <td>Africa</td>
+      <td>157.0</td>
+      <td>5026.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Flag_of_Malawi.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td><td data-score="2">2</td></td>
+      <td>Malaysia</td>
+      <td>Asia</td>
+      <td>125.0</td>
+      <td>9175.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td><td data-score="2">2</td></td>
+      <td>Mali</td>
+      <td>Africa</td>
+      <td>125.0</td>
+      <td>2614.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Mali.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td><td data-score="1">1</td></td>
+      <td>Mauritania</td>
+      <td>Africa</td>
+      <td>157.0</td>
+      <td>6622.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Flag_of_Mauritania.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td><td data-score="3">3</td></td>
+      <td>Mauritius</td>
+      <td>Africa</td>
+      <td>10.0</td>
+      <td>344.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Mauritius.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td><td data-score="3">3</td></td>
+      <td>Mexico</td>
+      <td>North America</td>
+      <td>56543.0</td>
+      <td>517714.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td><td data-score="3">3</td></td>
+      <td>Moldova</td>
+      <td>Europe</td>
+      <td>895.0</td>
+      <td>29905.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td><td data-score="3">3</td></td>
+      <td>Mongolia</td>
+      <td>Asia</td>
+      <td>0.0</td>
+      <td>298.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td><td data-score="3">3</td></td>
+      <td>Montenegro</td>
+      <td>Europe</td>
+      <td>75.0</td>
+      <td>3960.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td><td data-score="1">1</td></td>
+      <td>Morocco</td>
+      <td>Africa</td>
+      <td>632.0</td>
+      <td>41017.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td><td data-score="2">2</td></td>
+      <td>Mozambique</td>
+      <td>Africa</td>
+      <td>19.0</td>
+      <td>2791.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Mozambique.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td><td data-score="3">3</td></td>
+      <td>Namibia</td>
+      <td>Africa</td>
+      <td>35.0</td>
+      <td>3907.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Namibia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td><td data-score="3">3</td></td>
+      <td>Nepal</td>
+      <td>Asia</td>
+      <td>102.0</td>
+      <td>26019.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td><td data-score="3">3</td></td>
+      <td>Netherlands</td>
+      <td>Europe</td>
+      <td>6160.0</td>
+      <td>62437.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td><td data-score="3">3</td></td>
+      <td>New Zealand</td>
+      <td>Oceania</td>
+      <td>22.0</td>
+      <td>1271.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td><td data-score="3">3</td></td>
+      <td>Nicaragua</td>
+      <td>North America</td>
+      <td>128.0</td>
+      <td>4115.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td><td data-score="3">3</td></td>
+      <td>Niger</td>
+      <td>Africa</td>
+      <td>69.0</td>
+      <td>1165.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_of_Niger.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td><td data-score="3">3</td></td>
+      <td>Nigeria</td>
+      <td>Africa</td>
+      <td>974.0</td>
+      <td>48770.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td><td data-score="3">3</td></td>
+      <td>Norway</td>
+      <td>Europe</td>
+      <td>261.0</td>
+      <td>9850.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td><td data-score="0">0</td></td>
+      <td>Oman</td>
+      <td>Asia</td>
+      <td>562.0</td>
+      <td>82924.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Oman.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td><td data-score="3">3</td></td>
+      <td>Pakistan</td>
+      <td>Asia</td>
+      <td>6168.0</td>
+      <td>288717.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td><td data-score="3">3</td></td>
+      <td>Panama</td>
+      <td>North America</td>
+      <td>1746.0</td>
+      <td>80665.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td><td data-score="2">2</td></td>
+      <td>Papua New Guinea</td>
+      <td>Oceania</td>
+      <td>3.0</td>
+      <td>271.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Flag_of_Papua_New_Guinea.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td><td data-score="3">3</td></td>
+      <td>Paraguay</td>
+      <td>South America</td>
+      <td>127.0</td>
+      <td>9381.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Paraguay.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td><td data-score="3">3</td></td>
+      <td>Peru</td>
+      <td>South America</td>
+      <td>26075.0</td>
+      <td>525803.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td><td data-score="3">3</td></td>
+      <td>Philippines</td>
+      <td>Asia</td>
+      <td>2600.0</td>
+      <td>157918.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td><td data-score="3">3</td></td>
+      <td>Poland</td>
+      <td>Europe</td>
+      <td>1869.0</td>
+      <td>56090.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td><td data-score="3">3</td></td>
+      <td>Portugal</td>
+      <td>Europe</td>
+      <td>1775.0</td>
+      <td>53981.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td><td data-score="0">0</td></td>
+      <td>Qatar</td>
+      <td>Asia</td>
+      <td>192.0</td>
+      <td>114809.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td><td data-score="3">3</td></td>
+      <td>Romania</td>
+      <td>Europe</td>
+      <td>2954.0</td>
+      <td>69374.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td><td data-score="2">2</td></td>
+      <td>Russia</td>
+      <td>Europe</td>
+      <td>15617.0</td>
+      <td>917884.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td><td data-score="1">1</td></td>
+      <td>Rwanda</td>
+      <td>Africa</td>
+      <td>8.0</td>
+      <td>2352.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td><td data-score="0">0</td></td>
+      <td>Saudi Arabia</td>
+      <td>Asia</td>
+      <td>3369.0</td>
+      <td>297315.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td><td data-score="3">3</td></td>
+      <td>Senegal</td>
+      <td>Africa</td>
+      <td>251.0</td>
+      <td>12032.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td><td data-score="3">3</td></td>
+      <td>Serbia</td>
+      <td>Europe</td>
+      <td>670.0</td>
+      <td>29471.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td><td data-score="3">3</td></td>
+      <td>Sierra Leone</td>
+      <td>Africa</td>
+      <td>69.0</td>
+      <td>1954.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Sierra_Leone.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td><td data-score="1">1</td></td>
+      <td>Singapore</td>
+      <td>Asia</td>
+      <td>27.0</td>
+      <td>55661.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td><td data-score="3">3</td></td>
+      <td>Slovakia</td>
+      <td>Europe</td>
+      <td>31.0</td>
+      <td>2855.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td><td data-score="3">3</td></td>
+      <td>Slovenia</td>
+      <td>Europe</td>
+      <td>124.0</td>
+      <td>2401.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td><td data-score="2">2</td></td>
+      <td>Somalia</td>
+      <td>Africa</td>
+      <td>93.0</td>
+      <td>3256.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Somalia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td><td data-score="3">3</td></td>
+      <td>South Africa</td>
+      <td>Africa</td>
+      <td>11677.0</td>
+      <td>583653.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td><td data-score="3">3</td></td>
+      <td>South Korea</td>
+      <td>Asia</td>
+      <td>305.0</td>
+      <td>15318.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td><td data-score="3">3</td></td>
+      <td>Spain</td>
+      <td>Europe</td>
+      <td>28617.0</td>
+      <td>342813.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td><td data-score="3">3</td></td>
+      <td>Sri Lanka</td>
+      <td>Asia</td>
+      <td>11.0</td>
+      <td>2890.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td><td data-score="2">2</td></td>
+      <td>Suriname</td>
+      <td>South America</td>
+      <td>42.0</td>
+      <td>2961.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Flag_of_Suriname.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td><td data-score="0">0</td></td>
+      <td>Swaziland</td>
+      <td>Africa</td>
+      <td>69.0</td>
+      <td>3745.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Swaziland.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td><td data-score="3">3</td></td>
+      <td>Sweden</td>
+      <td>Europe</td>
+      <td>5783.0</td>
+      <td>84294.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td><td data-score="3">3</td></td>
+      <td>Switzerland</td>
+      <td>Europe</td>
+      <td>1714.0</td>
+      <td>37831.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Switzerland_%28Pantone%29.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td><td data-score="0">0</td></td>
+      <td>Syria</td>
+      <td>Asia</td>
+      <td>60.0</td>
+      <td>1593.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Flag_of_Syria.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td><td data-score="1">1</td></td>
+      <td>Tajikistan</td>
+      <td>Asia</td>
+      <td>64.0</td>
+      <td>8029.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Tajikistan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td><td data-score="2">2</td></td>
+      <td>Tanzania</td>
+      <td>Africa</td>
+      <td>21.0</td>
+      <td>509.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td><td data-score="1">1</td></td>
+      <td>Thailand</td>
+      <td>Asia</td>
+      <td>58.0</td>
+      <td>3377.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td><td data-score="1">1</td></td>
+      <td>Togo</td>
+      <td>Africa</td>
+      <td>27.0</td>
+      <td>1130.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Togo.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td><td data-score="3">3</td></td>
+      <td>Trinidad and Tobago</td>
+      <td>North America</td>
+      <td>10.0</td>
+      <td>474.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Trinidad_and_Tobago.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td><td data-score="3">3</td></td>
+      <td>Tunisia</td>
+      <td>Africa</td>
+      <td>54.0</td>
+      <td>2023.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td><td data-score="2">2</td></td>
+      <td>Turkey</td>
+      <td>Asia</td>
+      <td>5955.0</td>
+      <td>248117.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td><td data-score="1">1</td></td>
+      <td>Uganda</td>
+      <td>Africa</td>
+      <td>13.0</td>
+      <td>1434.0</td>
+      <td>Closed Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Flag_of_Uganda.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td><td data-score="2">2</td></td>
+      <td>Ukraine</td>
+      <td>Europe</td>
+      <td>2044.0</td>
+      <td>89719.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td><td data-score="0">0</td></td>
+      <td>United Arab Emirates</td>
+      <td>Asia</td>
+      <td>361.0</td>
+      <td>64102.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td><td data-score="3">3</td></td>
+      <td>United Kingdom</td>
+      <td>Europe</td>
+      <td>41361.0</td>
+      <td>317444.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td><td data-score="3">3</td></td>
+      <td>United States</td>
+      <td>North America</td>
+      <td>169481.0</td>
+      <td>5361165.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td><td data-score="3">3</td></td>
+      <td>Uruguay</td>
+      <td>South America</td>
+      <td>38.0</td>
+      <td>1434.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td><td data-score="0">0</td></td>
+      <td>Uzbekistan</td>
+      <td>Asia</td>
+      <td>228.0</td>
+      <td>34944.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td><td data-score="2">2</td></td>
+      <td>Venezuela</td>
+      <td>South America</td>
+      <td>276.0</td>
+      <td>32607.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Venezuela.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td><td data-score="0">0</td></td>
+      <td>Vietnam</td>
+      <td>Asia</td>
+      <td>22.0</td>
+      <td>934.0</td>
+      <td>Autocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td><td data-score="2">2</td></td>
+      <td>Yemen</td>
+      <td>Asia</td>
+      <td>529.0</td>
+      <td>1862.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td><td data-score="3">3</td></td>
+      <td>Zambia</td>
+      <td>Africa</td>
+      <td>260.0</td>
+      <td>9186.0</td>
+      <td>Democracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg" width="60" ></td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td><td data-score="2">2</td></td>
+      <td>Zimbabwe</td>
+      <td>Africa</td>
+      <td>130.0</td>
+      <td>5176.0</td>
+      <td>Open Anocracy</td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Zimbabwe.svg" width="60" ></td>
+    </tr>
+  </tbody>
+</table>
